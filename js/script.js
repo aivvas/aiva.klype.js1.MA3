@@ -2,9 +2,10 @@
 const getRemainder = (a,b) => a % b;
 
 //Question 2
-async function APIkey (){
-    
-        const response = await fetch ("https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=INSERTAPIKEYHERE");
+const URL = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=INSERTAPIKEYHERE";
+
+async function APIkey(){
+        const response = await fetch(URL);
         const results = await response.json();
         console.log(results)
     
@@ -12,4 +13,5 @@ async function APIkey (){
         console.log (final [i].rating);
 }
 
-GetAPI()
+APIkey()
+
