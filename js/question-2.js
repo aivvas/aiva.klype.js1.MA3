@@ -17,11 +17,32 @@ async function APIkey(){
 
 APIkey()
 
+async function name(){
+    const response = await fetch(URL);
+    const results = await response.json();
+    console.log(results);
+    resultsContainer.innerHTML = results;
+
+    for (let i = 0; i < final.length; i++)
+    console.log (final [i].name)
+}
+
 async function games(){
     const response = await fetch(URL);
     const results = await response.json();
     console.log(results);
+    resultsContainer.innerHTML = results;
 
     for (let i = 0; i < final.length; i++)
     console.log (final [i].rating)
+}
+
+async function numbertags(){
+    const response = await fetch(URL);
+    const results = await response.json();
+    console.log(results);
+    resultsContainer.innerHTML = results;
+
+    for (let i = 0; i < final.length; i++)
+    console.log (final [i].tags)
 }
