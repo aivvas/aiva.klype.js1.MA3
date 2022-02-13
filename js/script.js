@@ -15,18 +15,15 @@ async function APIkey(){
         console.log(error);
         resultsContainer.innerHTML = error
     }
+
+    for (let i = 0; i < final.length; i++)
+    console.log (final [i].rating)
 }
 
 APIkey()
 
-function games(){
-    try {
-        return FileList();
-    } catch (error) {
-        return "No list was supplied because: " + error.message;
-    }
+async function games(){
+    const response = await fetch(URL);
+    const results = await response.json();
+    console.log(results);
 }
-
-var results =
-games ({});
-console.log(results);
