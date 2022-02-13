@@ -4,13 +4,17 @@ const getRemainder = (a,b) => a % b;
 //Question 2
 const URL = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=57e0d1680a184b218635d79c78dea433";
 
+const resultsContainer = document.querySelector(".results");
+
 async function APIkey(){
+    try {
         const response = await fetch(URL);
         const results = await response.json();
-        console.log(results.length)
-
-    for (let i = 0; i < results.length; i++)
-    console.log (results [i].rating);
+        console.log(results);
+    } catch (error) {
+        console.log(error);
+        resultsContainer.innerHTML = error
+    }
 }
 
 APIkey()
