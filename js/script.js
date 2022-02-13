@@ -9,8 +9,8 @@ async function APIkey(){
         const results = await response.json();
         console.log(results.length)
 
-    for (let i = 0; i < final.length; i++)
-    console.log (final [i].rating);
+    for (let i = 0; i < results.length; i++)
+    console.log (results [i].rating);
 }
 
 APIkey()
