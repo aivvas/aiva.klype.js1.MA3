@@ -15,3 +15,8 @@ async function APIkey(){
 
 APIkey()
 
+async function games(){
+    const response = await fetch(URL);
+    const results = await response.json();
+    console.log(results);
+}
