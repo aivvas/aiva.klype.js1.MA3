@@ -19,8 +19,14 @@ async function APIkey(){
 
 APIkey()
 
-async function games(){
-    const response = await fetch(URL);
-    const results = await response.json();
-    console.log(results);
+function games(){
+    try {
+        return FileList();
+    } catch (error) {
+        return "No list was supplied because: " + error.message;
+    }
 }
+
+var results =
+games ({});
+console.log(results);
